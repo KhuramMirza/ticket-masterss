@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@theme {
+  --color-primary-100: #6794ec;
+  --color-primary-200: #4e82e9;
+  --color-primary-300: #3571e5;
+  --color-primary-400: #1b5fe2;
+  --color-primary-500: #024ddf;
+  --color-primary-600: #0245c9;
+  --color-primary-700: #023eb2;
+  --color-primary-800: #01369c;
+  --color-primary-900: #012e86;
+
+  --color-accent-100: #717171;
+  --color-accent-200: #595959;
+  --color-accent-300: #414141;
+  --color-accent-400: #2a2a2a;
+  --color-accent-500: #121212;
+  --color-accent-600: #101010;
+  --color-accent-700: #0e0e0e;
+  --color-accent-800: #0d0d0d;
+  --color-accent-900: #0b0b0b;
+}
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme("colors.primary.700");
+    border-right-color: theme("colors.primary.200");
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme("colors.primary.200");
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
