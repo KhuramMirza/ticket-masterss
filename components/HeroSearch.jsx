@@ -103,13 +103,13 @@ export default function HeroSearch() {
           <div className="flex-[1.5] group flex items-center px-5 py-3 md:py-4 hover:bg-gray-50 transition-colors cursor-pointer relative">
             <Search className="text-[#026CDF] w-5 h-5 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
             <div className="text-left w-full">
-              <label className="block text-[10px] font-bold text-[#026CDF] uppercase tracking-wider mb-0.5">
+              <label className="block text-base font-bold text-[#026CDF] uppercase tracking-wider mb-0.5">
                 Looking For
               </label>
               <input
                 type="text"
                 placeholder="Artist, Event or Venue"
-                className="w-full text-sm font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-medium outline-none bg-transparent truncate cursor-pointer"
+                className="w-full text-base font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-medium outline-none bg-transparent truncate cursor-pointer"
                 value={searchData.query}
                 onChange={(e) =>
                   setSearchData({ ...searchData, query: e.target.value })
@@ -122,13 +122,13 @@ export default function HeroSearch() {
           <div className="flex-1 group flex items-center px-5 py-3 md:py-4 hover:bg-gray-50 transition-colors cursor-pointer">
             <MapPin className="text-[#026CDF] w-5 h-5 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
             <div className="text-left w-full">
-              <label className="block text-[10px] font-bold text-[#026CDF] uppercase tracking-wider mb-0.5">
+              <label className="block text-base font-bold text-[#026CDF] uppercase tracking-wider mb-0.5">
                 Location
               </label>
               <input
                 type="text"
                 placeholder="City or Zip Code"
-                className="w-full text-sm font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-medium outline-none bg-transparent truncate cursor-pointer"
+                className="w-full text-base font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-medium outline-none bg-transparent truncate cursor-pointer"
                 value={searchData.location}
                 onChange={(e) =>
                   setSearchData({ ...searchData, location: e.target.value })
@@ -141,13 +141,13 @@ export default function HeroSearch() {
           <div className="flex-1 group flex items-center px-5 py-3 md:py-4 hover:bg-gray-50 transition-colors cursor-pointer">
             <Calendar className="text-[#026CDF] w-5 h-5 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
             <div className="text-left w-full">
-              <label className="block text-[10px] font-bold text-[#026CDF] uppercase tracking-wider mb-0.5">
+              <label className="block text-base font-bold text-[#026CDF] uppercase tracking-wider mb-0.5">
                 Date
               </label>
               <input
                 type="text"
                 placeholder="All Dates"
-                className="w-full text-sm font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-medium outline-none bg-transparent truncate cursor-pointer"
+                className="w-full text-base font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-medium outline-none bg-transparent truncate cursor-pointer"
                 value={searchData.date}
                 onChange={(e) =>
                   setSearchData({ ...searchData, date: e.target.value })
@@ -160,7 +160,7 @@ export default function HeroSearch() {
           <div className="p-2 md:pl-0">
             <button
               onClick={handleSearchClick}
-              className="w-full md:w-auto h-full min-h-[50px] bg-[#026CDF] hover:bg-blue-700 text-white text-sm font-bold uppercase tracking-wide px-8 py-3 rounded-xl md:rounded-full transition-all shadow-lg hover:shadow-blue-500/30 flex items-center justify-center gap-2"
+              className="w-full md:w-auto h-full min-h-[50px] bg-[#026CDF] hover:bg-blue-700 text-white text-sm font-bold uppercase tracking-wide px-8 py-3 rounded-xl md:rounded-full transition-all shadow-lg hover:shadow-blue-500/30 flex items-center hover:cursor-pointer justify-center gap-2"
             >
               <Search className="w-4 h-4 md:hidden hover:cursor-pointer" />{" "}
               {/* Icon only on mobile button */}
@@ -221,7 +221,7 @@ export default function HeroSearch() {
 
                 <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-4">
                   <div>
-                    <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">
+                    <label className="block text-sm font-bold text-gray-500 uppercase tracking-wider mb-1.5">
                       Full Name
                     </label>
                     <input
@@ -237,7 +237,7 @@ export default function HeroSearch() {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">
+                    <label className="block text-sm font-bold text-gray-500 uppercase tracking-wider mb-1.5">
                       Email Address
                     </label>
                     <input
@@ -253,7 +253,7 @@ export default function HeroSearch() {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">
+                    <label className="block text-sm font-bold text-gray-500 uppercase tracking-wider mb-1.5">
                       Phone Number
                     </label>
                     <input
@@ -271,7 +271,7 @@ export default function HeroSearch() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-[#026CDF] cursor-pointer hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all mt-2 flex items-center justify-center text-sm"
+                    className="w-full bg-[#026CDF] cursor-pointer hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all mt-2 flex items-center justify-center text-base"
                   >
                     {loading ? (
                       <Loader2 className="w-5 h-5 animate-spin" />
@@ -280,7 +280,7 @@ export default function HeroSearch() {
                     )}
                   </button>
 
-                  <p className="text-[10px] text-center text-gray-400 mt-4 leading-relaxed px-4">
+                  <p className="text-xs text-center text-gray-500 mt-4 leading-relaxed px-4">
                     By proceeding, you consent to receive emails about this
                     event. We value your privacy.
                   </p>
