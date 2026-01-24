@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@/app/_styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FloatingWhatsappBtn from "@/components/ui/FloatingWhatsappButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} text-accent-500 relative flex min-h-screen flex-col overflow-x-hidden antialiased`}
       >
         <Header />
-        {children}
+        <main>
+          {children}
+          <FloatingWhatsappBtn />
+        </main>
         <Footer />
       </body>
     </html>
