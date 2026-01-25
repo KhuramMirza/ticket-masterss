@@ -2,12 +2,13 @@ import HeroSearch from "@/components/HeroSearch";
 import TrendingCarousel from "@/components/TrendingCarousel";
 import SponsoredEvents from "@/components/SponsoredEvents";
 import CategorySection from "@/components/CategorySection";
+import EntertainmentGuides from "@/components/EntertainmentGuides";
+import DiscoverMore from "@/components/DiscoverMore";
 
 import { concertEvents } from "@/data/concertEvents";
 import { sportsEvents } from "@/data/sportsEvents";
 import { artsEvents } from "@/data/artsEvents";
 import { familyEvents } from "@/data/familyEvents";
-import EntertainmentGuides from "@/components/EntertainmentGuides";
 
 export default function Page() {
   return (
@@ -53,6 +54,9 @@ export default function Page() {
 
       {/* Section 5: Entertainment Guides */}
       <EntertainmentGuides />
+
+      {/* Section 6: Discover More */}
+      <DiscoverMore />
     </div>
   );
 }
