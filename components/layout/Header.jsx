@@ -1,16 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import ContactButton from "@/components/ui/ContactButton";
 
 const navLinks = [
-  { name: "Concerts" },
-  { name: "Sports" },
-  { name: "Arts" },
-  { name: "Family" },
-  { name: "Cities" },
+  { name: "Concerts", id: "concerts" },
+  { name: "Sports", id: "sports" },
+  { name: "Arts", id: "art" },
+  { name: "Family", id: "family" },
+  { name: "Cities", id: "cities" },
 ];
 
 export default function Header() {
@@ -34,18 +35,16 @@ export default function Header() {
         <ul className="hidden md:flex items-center justify-center gap-4">
           {navLinks.map((link) => (
             <li key={link.name} className="flex items-center">
-              <Link
-                href={"/"}
+              <a
+                href={`#${link.id}`}
                 className="font-semibold text-lg hover:text-gray-200 transition-colors"
               >
                 {link.name}
-              </Link>
+              </a>
             </li>
           ))}
 
-          <button className="bg-white text-accent-500 px-4 py-2 rounded-2xl font-semibold hover:cursor-pointer hover:scale-105 transition-all duration-100">
-            Get Alters
-          </button>
+          <ContactButton />
         </ul>
 
         {/* --- MOBILE HAMBURGER BUTTON (Visible on Mobile) --- */}
@@ -63,7 +62,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={"/"}
+              href={`#${link.id}`}
               className="font-semibold text-lg hover:text-gray-200"
               onClick={() => setIsMenuOpen(false)} // Close menu when clicked
             >
@@ -71,9 +70,7 @@ export default function Header() {
             </Link>
           ))}
 
-          <button className="bg-white text-accent-500 px-6 py-2 rounded-2xl font-semibold hover:scale-105 transition-all w-3/4">
-            Get Alters
-          </button>
+          <ContactButton />
         </div>
       )}
     </header>

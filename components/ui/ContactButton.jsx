@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 export default function ContactButton() {
-  console.log("clicked");
   return (
     <Link
       href={`https://wa.me/${process.env.NEXT_PUBLIC_TM_PHONE_NUMBER}`}
