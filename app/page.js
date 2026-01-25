@@ -7,6 +7,7 @@ import { concertEvents } from "@/data/concertEvents";
 import { sportsEvents } from "@/data/sportsEvents";
 import { artsEvents } from "@/data/artsEvents";
 import { familyEvents } from "@/data/familyEvents";
+import EntertainmentGuides from "@/components/EntertainmentGuides";
 
 export default function Page() {
   return (
@@ -49,6 +50,9 @@ export default function Page() {
         linkText="See All Family"
         events={familyEvents}
       />
+
+      {/* Section 5: Entertainment Guides */}
+      <EntertainmentGuides />
     </div>
   );
 }
